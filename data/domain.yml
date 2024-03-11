@@ -1,0 +1,80 @@
+version: "1.0"
+
+intents:
+  - greet
+  - general_information_request
+  - zekin_request
+  - authorization_request 
+  - account_confirmation_request
+  - login_issue_request
+  - view_results_issue_request
+  - registering_withdrawal_number_request
+  - making_withdrawal_request
+  - voting_difficulty_request
+  - displaying_voting_form_request
+  - status_votes_request
+  - changing_standard_number_vote_request
+  - credit_card_issues_request
+  - verifying_number_votes_request
+  - incorrect_settings_request
+  - insufficient_balance_request
+  - success_request
+  - transaction_cancel_request
+  - waiting_customer_payment_request
+  - goodbye
+
+responses:
+  utter_greet:
+  - text: "Bonjour! Comment puis-je vous aider aujourd'hui?"
+  
+  utter_general_information:
+  - text: "Zekin est une plateforme en ligne qui facilite les votes et les élections. Elle offre un moyen pratique et sécurisé de gérer les processus de vote."
+
+  utter_zekin_registration_info:
+  - text: "Pour créer un compte sur Zekin, veuillez suivre les instructions disponibles sur la page d'inscription de notre site Web."
+
+  utter_authorization_info:
+  - text: "Zekin est pleinement autorisé à organiser des votes en ligne. Nous respectons toutes les réglementations en vigueur dans ce domaine."
+
+  utter_account_confirmation_steps:
+  - text: "Si vous rencontrez des difficultés pour confirmer votre compte sur Zekin, veuillez suivre les étapes indiquées dans notre guide d'aide."
+
+  utter_login_issue_resolution:
+  - text: "Pour récupérer votre mot de passe ou résoudre d'autres problèmes de connexion, visitez la page de connexion sur notre site Web."
+
+  utter_view_results_guidance:
+  - text: "Pour consulter les résultats des votes sur Zekin, assurez-vous d'être connecté à votre compte, puis accédez à la section 'Résultats'."
+
+  utter_withdrawal_number_registration_steps:
+  - text: "Pour enregistrer votre numéro de retrait sur Zekin, suivez les instructions fournies dans votre profil utilisateur."
+
+  utter_withdrawal_request_steps:
+  - text: "Pour faire une demande de retrait sur Zekin, remplissez le formulaire de demande disponible dans votre compte et suivez les instructions."
+
+  utter_voting_difficulty_resolution:
+  - text: "Si vous avez des difficultés à voter sur Zekin, veuillez vérifier votre connexion Internet et suivre les étapes de vote indiquées sur notre plateforme."
+
+  utter_voting_form_display_steps:
+  - text: "Pour accéder au formulaire de vote sur Zekin, assurez-vous d'être connecté à votre compte et suivez le lien fourni dans la section 'Vote'."
+
+  utter_vote_status_check_info:
+  - text: "Pour vérifier le statut de vos votes sur Zekin, accédez à la section 'Historique des votes' dans votre compte utilisateur."
+
+  utter_ask_continue_issue:
+  - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin d'autres informations?"
+
+  utter_acknowledge_issue:
+  - text: "Je prends note de votre problème. Je vais essayer de vous aider à le résoudre."
+
+  utter_gratitude:
+  - text: "Merci! N'hésitez pas à me contacter si vous avez d'autres questions."
+
+  utter_goodbye:
+  - text: "Au revoir! Passez une bonne journée !
+
+
+  
+
+  session_config:
+    session_expiration_time: 60
+    carry_over_slots_to_new_session: true

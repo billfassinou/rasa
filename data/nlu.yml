@@ -1,0 +1,134 @@
+version: "1.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Bonjour
+    - Salut
+    - Hey
+    - cc
+    - bjr
+    - Bonsoir
+    - bsr
+
+- intent: general_information_request
+  examples: |
+    - Zekin, c'est quoi ?
+    - Quelle est la fonction de Zekin ?
+    - Pouvez-vous m'expliquer ce qu'est Zekin ?
+
+- intent: zekin_request
+  examples: |
+    - Comment puis-je créer mon compte sur Zekin ?
+    - Quelle est la procédure pour s'inscrire sur Zekin ?
+    - Je veux m'inscrire sur Zekin, que dois-je faire ?
+
+- intent: authorization_request 
+  examples: |
+    - Zekin a-t-il les autorisations nécessaires pour organiser les votes en ligne ?
+    - Est-ce que Zekin est autorisé à organiser des votes en ligne ?
+    - Quelles sont les autorisations de Zekin pour les votes en ligne ?
+
+- intent: account_confirmation_request
+  examples: |
+    - Je rencontre des difficultés pour confirmer mon compte. Que dois-je faire?
+    - Comment puis-je confirmer mon compte sur Zekin ?
+    - Que faire si je ne peux pas confirmer mon compte sur Zekin ?
+
+- intent: login_issue_request
+  examples: |
+    - Je ne peux pas me connecter à mon compte. Comment puis-je résoudre ce problème?
+    - Je ne peux pas me connecter à mon espace nominé. Que dois-je vérifier?
+    - Comment puis-je récupérer mon mot de passe pour me connecter à Zekin ?
+
+- intent: view_results_issue_request
+  examples: |
+    - Je ne trouve pas les résultats des votes. Comment puis-je les consulter?
+    - Où puis-je trouver les résultats des votes sur Zekin ?
+    - Comment accéder aux résultats des votes sur Zekin ?
+
+- intent: registering_withdrawal_number_request
+  examples: |
+    - Je n'arrive pas à enregistrer mon numéro de retrait. Que dois-je faire?
+    - Comment enregistrer un numéro de retrait sur Zekin ?
+    - Que faire si je rencontre des problèmes lors de l'enregistrement de mon numéro de retrait sur Zekin ?
+
+- intent: making_withdrawal_request
+  examples: |
+    - Comment puis-je faire une demande de retrait sur Zekin?
+    - Quelle est la procédure pour demander un retrait sur Zekin ?
+    - Où puis-je trouver le formulaire de demande de retrait sur Zekin ?
+
+- intent: voting_difficulty_request
+  examples: |
+    - J'ai des difficultés à voter sur Zekin. Pouvez-vous m'aider?
+    - Comment puis-je voter sur Zekin si j'ai des problèmes ?
+    - Que faire si je rencontre des difficultés lors du vote sur Zekin ?
+
+- intent: displaying_voting_form_request
+  examples: |
+    - Le formulaire de vote ne s'affiche pas correctement. Que dois-je faire?
+    - Comment puis-je accéder au formulaire de vote sur Zekin ?
+    - Pourquoi le formulaire de vote ne fonctionne-t-il pas sur Zekin ?
+
+- intent: status_votes_request
+  examples: |
+    - Je ne comprends pas le statut de mes votes. Comment puis-je le vérifier?
+    - Où puis-je vérifier le statut de mes votes sur Zekin ?
+    - Comment savoir si mes votes ont été enregistrés avec succès sur Zekin ?
+
+- intent: changing_standard_number_vote_request
+  examples: |
+    - Je souhaite modifier le nombre de votes standard. Comment puis-je le faire?
+    - Comment ajuster le nombre de votes standard sur Zekin ?
+    - Est-il possible de changer le nombre de votes standard sur Zekin ?
+
+- intent: credit_card_issues_request
+  examples: |
+    - Ma carte bancaire ne passe pas pour valider mon vote. Que dois-je vérifier?
+    - Pourquoi ma carte bancaire ne fonctionne-t-elle pas sur Zekin ?
+    - Comment puis-je résoudre les problèmes avec ma carte bancaire sur Zekin ?
+
+- intent: verifying_number_votes_request
+  examples: |
+    - Comment puis-je vérifier le nombre de votes obtenus par tous les candidats de l'évènement?
+    - Où puis-je trouver le total des votes pour chaque candidat sur Zekin ?
+    - Existe-t-il un moyen de vérifier le nombre total de votes pour l'événement sur Zekin ?
+
+- intent: incorrect_settings_request
+  examples: |
+    - Je veux voter, mais je n'y arrive pas. Hors tout semble normal
+    - Tout semble correct, mais je ne peux pas voter. Que se passe-t-il ?
+    - Je ne peux pas voter même si les paramètres semblent corrects. Que puis-je faire ?
+
+- intent: insufficient_balance_request
+  examples: |
+    - Je veux voter, mais le prompt ne vient pas pour que je puisse confirmer le paiement
+    - Comment résoudre le problème de solde insuffisant pour voter sur Zekin ?
+    - Que faire si je ne peux pas confirmer le paiement pour voter sur Zekin en raison d'un solde insuffisant ?
+
+- intent: success_request
+  examples: |
+    - j'ai pu voter, tout est ok
+    - Mon vote a été enregistré avec succès sur Zekin.
+    - Je viens de voter avec succès sur Zekin.
+
+- intent: transaction_cancel_request
+  examples: |
+    - je ne savais pas que le vote était payant
+    - Je ne suis pas au courant qu'il faut payer pour voter sur Zekin.
+    - Pourquoi ma transaction a-t-elle été annulée lors de la tentative de vote sur Zekin ?
+
+- intent: waiting_customer_payment_request
+  examples: |
+    - je n'ai aucune envie de voter. Vous ramasser nos sous pour rien
+    - Je n'ai pas l'intention de voter. Pourquoi ai-je été facturé ?
+    - Je ne veux pas voter, mais j'ai été facturé. Pourquoi ?
+
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - À bientôt
+    - Bye
+    - merci
+    - ok
