@@ -39,7 +39,7 @@ rules:
 - rule: Handle registering withdrawal number request
   steps:
   - intent: registering_withdrawal_number_request
-  - action: utter_registering_withdrawal_number_solution
+  - action: utter_registering_withdrawal_number_request
 
 - rule: Handle making withdrawal request
   steps:
