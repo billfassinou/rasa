@@ -61,7 +61,7 @@ responses:
   - text: "Pour vérifier le statut de vos votes sur Zekin, accédez à la section 'Historique des votes' dans votre compte utilisateur."
 
   utter_ask_continue_issue:
-  - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin d'autres informations?"
+  - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin d'autres informations ?"
 
   utter_acknowledge_issue:
   - text: "Je prends note de votre problème. Je vais essayer de vous aider à le résoudre."
@@ -73,6 +73,6 @@ responses:
   - text: "Au revoir! Passez une bonne journée !"
 
 
-  session_config:
-    session_expiration_time: 60
-    carry_over_slots_to_new_session: true
+session_config:
+  session_expiration_time: 60
+  arry_over_slots_to_new_session: true
