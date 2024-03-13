@@ -70,10 +70,8 @@ responses:
   - text: "Merci! N'hésitez pas à me contacter si vous avez d'autres questions."
 
   utter_goodbye:
-  - text: "Au revoir! Passez une bonne journée !""
+  - text: "Au revoir! Passez une bonne journée !"
 
-
-  
 
   session_config:
     session_expiration_time: 60
