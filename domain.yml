@@ -81,6 +81,9 @@ responses:
   utter_transaction_cancel_request:
   - text: "Les votes pour cet événement sont payant. Merci de vérifier que vous avez suffisamment de solde pour accorder votre vote. Votre artiste compte sur vous pour se révéler au monde."
 
+  utter_waiting_customer_payment_request:
+  - text: "Notre culture a besoin d'être révélé à travers le monde. C'est notre façon à nous de contribuer grandement à cette révélation. Nous comptons aussi sur vous pour cette noble à travers votre soutien quotien aux acteurs culturels."
+
   utter_ask_continue_issue:
   - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin d'autres informations ?"
 
