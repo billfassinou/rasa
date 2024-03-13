@@ -19,7 +19,7 @@ rules:
 - rule: Handle authorization request for Zekin
   steps:
   - intent: authorization_request
-  - action: utter_aauthorization_request
+  - action: utter_authorization_request
 
 - rule: Handle account confirmation request
   steps:
