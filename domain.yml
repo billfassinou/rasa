@@ -25,40 +25,61 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Bonjour! Comment puis-je vous aider aujourd'hui?"
-  
-  utter_general_information:
+  - text: "Bonjour! Comment puis-je vous aider aujourd'hui ?"
+
+  utter_general_information_request:
   - text: "Zekin est une plateforme en ligne qui facilite les votes et les élections. Elle offre un moyen pratique et sécurisé de gérer les processus de vote."
 
-  utter_zekin_registration_info:
+  utter_zekin_request:
   - text: "Pour créer un compte sur Zekin, veuillez suivre les instructions disponibles sur la page d'inscription de notre site Web."
 
-  utter_authorization_info:
+  utter_authorization_request:
   - text: "Zekin est pleinement autorisé à organiser des votes en ligne. Nous respectons toutes les réglementations en vigueur dans ce domaine."
 
-  utter_account_confirmation_steps:
+  utter_account_confirmation_request:
   - text: "Si vous rencontrez des difficultés pour confirmer votre compte sur Zekin, veuillez suivre les étapes indiquées dans notre guide d'aide."
 
-  utter_login_issue_resolution:
+  utter_login_issue_request:
   - text: "Pour récupérer votre mot de passe ou résoudre d'autres problèmes de connexion, visitez la page de connexion sur notre site Web."
 
-  utter_view_results_guidance:
+  utter_view_results_issue_request:
   - text: "Pour consulter les résultats des votes sur Zekin, assurez-vous d'être connecté à votre compte, puis accédez à la section 'Résultats'."
 
-  utter_withdrawal_number_registration_steps:
+  utter_registering_withdrawal_number_request:
   - text: "Pour enregistrer votre numéro de retrait sur Zekin, suivez les instructions fournies dans votre profil utilisateur."
 
-  utter_withdrawal_request_steps:
+  utter_making_withdrawal_request:
   - text: "Pour faire une demande de retrait sur Zekin, remplissez le formulaire de demande disponible dans votre compte et suivez les instructions."
 
-  utter_voting_difficulty_resolution:
+  utter_voting_difficulty_request:
   - text: "Si vous avez des difficultés à voter sur Zekin, veuillez vérifier votre connexion Internet et suivre les étapes de vote indiquées sur notre plateforme."
 
-  utter_voting_form_display_steps:
+  utter_displaying_voting_form_request:
   - text: "Pour accéder au formulaire de vote sur Zekin, assurez-vous d'être connecté à votre compte et suivez le lien fourni dans la section 'Vote'."
 
-  utter_vote_status_check_info:
+  utter_status_votes_request:
   - text: "Pour vérifier le statut de vos votes sur Zekin, accédez à la section 'Historique des votes' dans votre compte utilisateur."
+
+  utter_changing_standard_number_vote_request:
+  - text: "Pour changer le nombre de vote par défaut, il vous suffit simplement de cliquer dans le champ, d'effacer le nombre par défaut et de saisir le nombre de vote souhaité"
+
+  utter_credit_card_issues_request:
+  - text: "Seulement les cartes bancaires internationnales telles que VISA et MASTERCARD sont pris en compte. Toutefois, si vous utilisez l'une de ces cartes et que le problème persiste toujours, il se peut l'agrégateur de paiement rencontre des perturbations.  Veuillez réessayer à nouveau."
+  
+  utter_verifying_number_votes_request:
+  - text: "Pour vérifier le nombre de vote des candidats sur Zekin, allez sur https://zekin.me/events, cliquez sur le nom de votre événement. Si le promoteur a rendu les résultats public, vous verrez alors afficher le nombre de vote des candidats. Sinon, veuillez contacter le promoteur culturel."
+
+  utter_incorrect_settings_request:
+  - text: "Nous avons pris bonne note de votre requête. Notre support technique est déjà à pied d'œuvre pour régler le problème."
+
+  utter_insufficient_balance_request:
+  - text: "Vérifier que vous avez suffisamment de solde disponible dans votre compte pour accorder ce nombre de vote. Vous pourriez diminuer le nombre de vote pour le correspondre à votre solde ou recharger votre compte et réessayer encore."
+
+  utter_success_request:
+  - text: "Merci de soutenir votre artiste. Vous contribuer grandement à la révélation de la culture africaine à travers le monde."
+
+  utter_transaction_cancel_request:
+  - text: "Les votes pour cet événement sont payant. Merci de vérifier que vous avez suffisamment de solde pour accorder votre vote. Votre artiste compte sur vous pour se révéler au monde."
 
   utter_ask_continue_issue:
   - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin d'autres informations ?"

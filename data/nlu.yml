@@ -81,7 +81,7 @@ nlu:
   examples: |
     - Je souhaite modifier le nombre de votes standard. Comment puis-je le faire?
     - Comment ajuster le nombre de votes standard sur Zekin ?
-    - Est-il possible de changer le nombre de votes standard sur Zekin ?
+    - Est-il possible de changer le nombre de votes par défaut sur Zekin ?
 
 - intent: credit_card_issues_request
   examples: |
@@ -122,8 +122,8 @@ nlu:
 - intent: waiting_customer_payment_request
   examples: |
     - je n'ai aucune envie de voter. Vous ramasser nos sous pour rien
-    - Je n'ai pas l'intention de voter. Pourquoi ai-je été facturé ?
-    - Je ne veux pas voter, mais j'ai été facturé. Pourquoi ?
+    - Je n'ai pas l'intention de voter. 
+    - je n'arrive pas à valider le vote.
 
 - intent: goodbye
   examples: |
