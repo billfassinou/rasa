@@ -5,8 +5,11 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+
+- story: Handle Zekin general information
+  steps:
   - intent: general_information_request
-  - action: utter_general_information
+  - action: utter_general_information_request
 
 - story: Handle Zekin account creation
   steps:
