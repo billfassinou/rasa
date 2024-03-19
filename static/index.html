@@ -1,0 +1,19 @@
+<head>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+  </head>
+  <body>
+    <div class="chat-container"></div>
+  
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+    <script type="text/javascript">
+      var chatroom = new window.Chatroom({
+        host: "192.168.56.200:5005",
+        title: "Chat avec Tassi",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Bonjour, je m'appelle Tassi, l'assistant virtuel de Zekin. En quoi puis-je vous aider ?",
+        speechRecognition: "fr-FR",
+        voiceLang: "fr-FR"
+      });
+      chatroom.openChat();
+    </script>
+  </body>
