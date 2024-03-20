@@ -1,19 +1,17 @@
-<head>
-  <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
-</head>
-<body>
-  <div class="chat-container"></div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <title>Zekin AI</title>
+  </head>
+  <body>
 
-  <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"></script>
-  <script type="text/javascript">
-    var chatroom = new window.Chatroom({
-      host: "http://192.168.56.200:5005",
-      title: "Chat avec Tassi",
-      container: document.querySelector(".chat-container"),
-      welcomeMessage: "Bonjour, je m'appelle Tassi, l'assistant virtuel de Zekin. En quoi puis-je vous aider ?",
-      speechRecognition: "fr-FR",
-      voiceLang: "fr-FR"
-    });
-    chatroom.openChat();
-  </script>
-</body>
+    <div id="rasa-chat-widget" data-websocket-url="http://51.38.34.139:5005/socket.io/"></div>
+    <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+
+
+    
+  </body>
+</html>
