@@ -10,6 +10,7 @@ nlu:
     - bjr
     - Bonsoir
     - bsr
+    - coucou
 
 - intent: general_information_request
   examples: |
