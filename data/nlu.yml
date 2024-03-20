@@ -76,24 +76,23 @@ nlu:
     - Zekin a-t-il les autorisations nécessaires pour organiser les votes en ligne ?
     - Est-ce que Zekin est autorisé à organiser des votes en ligne ?
     - Quelles sont les autorisations de Zekin pour les votes en ligne ?
-    - Les votes en ligne sur Zekin sont-ils autorisés ?
-    - Zekin respecte-t-il les réglementations pour les votes en ligne ?
-    - Quels sont les permis nécessaires pour les votes en ligne sur Zekin ?
-    - Est-ce légal d'organiser des votes sur Zekin ?
-    - Zekin est-il conforme aux réglementations des votes en ligne ?
-    - Quelles sont les règles à suivre pour les votes en ligne sur Zekin ?
-    - Y a-t-il des restrictions légales concernant les votes en ligne sur Zekin ?
-    - Est-il sûr de participer à des votes sur Zekin ?
-    - Puis-je faire confiance à Zekin pour organiser des votes ?
-    - Zekin a-t-il une politique de confidentialité pour les votes en ligne ?
-    - Quelles mesures de sécurité sont en place pour les votes sur Zekin ?
-    - Zekin est-il certifié pour organiser des votes en ligne ?
-    - Comment puis-je vérifier l'authenticité des résultats des votes sur Zekin ?
-    - Zekin garantit-il l'intégrité des votes en ligne ?
-    - Quelles garanties Zekin offre-t-il pour les votes en ligne ?
-    - Y a-t-il des risques à utiliser Zekin pour des votes en ligne ?
-    - Comment puis-je savoir si Zekin respecte les lois sur les votes en ligne dans ma région ?
-
+    - Pouvez-vous confirmer si Zekin dispose des autorisations requises pour ses services en ligne ?
+    - Est-ce que Zekin est légalement autorisé à gérer des opérations de vote en ligne ?
+    - A-t-on vérifié si Zekin possède toutes les autorisations nécessaires pour ses services en ligne ?
+    - Comment puis-je savoir si Zekin est approuvé pour les opérations de vote en ligne ?
+    - Zekin est-il en conformité avec les réglementations pour organiser des votes en ligne ?
+    - Quels documents prouvent que Zekin a les autorisations appropriées pour ses services ?
+    - Où puis-je trouver des informations sur les autorisations légales de Zekin pour les votes en ligne ?
+    - Comment puis-je vérifier si Zekin est habilité à organiser des votes en ligne ?
+    - Quelles sont les preuves de l'autorisation de Zekin pour les opérations de vote en ligne ?
+    - Zekin a-t-il reçu l'approbation nécessaire pour ses activités de vote en ligne ?
+    - Comment puis-je être sûr que Zekin est approuvé pour gérer des votes en ligne ?
+    - Où puis-je trouver des détails sur les autorisations légales de Zekin pour ses services en ligne ?
+    - Zekin est-il officiellement autorisé à gérer les votes en ligne ?
+    - Existe-t-il des certificats ou des licences confirmant l'autorisation de Zekin pour les votes en ligne ?
+    - Quelles sont les preuves que Zekin est qualifié pour organiser des votes en ligne ?
+    - Où puis-je consulter les autorisations accordées à Zekin pour ses activités de vote en ligne ?
+    - Avez-vous des informations sur les autorisations légales de Zekin pour les services en ligne ?
 
 - intent: account_confirmation_request
   examples: |
@@ -495,3 +494,4 @@ nlu:
     - Passe une bonne journée
     - Merci et au revoir
     - À tout à l'heure
+
