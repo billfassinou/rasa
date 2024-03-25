@@ -1,17 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <title>Zekin AI</title>
-  </head>
-  <body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Paiement</title>
+    <!-- Lien CDN de Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Inclure Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Style supplémentaire pour centrer le formulaire */
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Formulaire de Paiement</h2>
+        <form>
+            <!-- Champ téléphone -->
+            <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" class="form-control" id="telephone" required>
+            </div>
 
-    <div id="rasa-chat-widget" data-websocket-url="http://51.38.34.139:5005/socket.io/"></div>
+            <!-- Champ montant -->
+            <div class="form-group">
+                <label for="montant">Montant</label>
+                <input type="number" class="form-control" id="montant" required>
+            </div>
+
+            <!-- Champ moyen de paiement -->
+            <div class="form-group">
+                <label for="moyenPaiement">Moyen de Paiement</label>
+                <select class="form-control" id="moyenPaiement">
+                    <option>Mobile Money</option>
+                    <option>Carte Bancaire</option>
+                </select>
+            </div>
+
+            <!-- Bouton soumettre -->
+            <button type="submit" class="btn btn-primary">Soumettre</button>
+        </form>
+    </div>
+
+    
+
+    <!-- Modal Bootstrap -->
+    <div class="modal" tabindex="-1" role="dialog" id="response-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Réponse de Rasa</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="response-text">
+                    <!-- Contenu de la réponse -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="prev-button">Précédent</button>
+                    <button type="button" class="btn btn-secondary" id="next-button">Suivant</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclure Bootstrap JS et jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      
+
+    <script>
+    // Index de la réponse actuellement affichée
+    var currentIndex = 0;
+
+    // Fonction pour mettre à jour le modal avec la réponse actuelle
+    function updateModal() {
+            document.getElementById("response-text").innerText = responses[currentIndex];
+    }
+
+    // Lorsque le bouton "Suivant" est cliqué
+    document.getElementById("next-button").addEventListener("click", function() {
+            currentIndex = (currentIndex + 1) % responses.length; // Avancer au prochain indice
+            updateModal(); // Mettre à jour le modal avec la nouvelle réponse
+    });
+
+    // Lorsque le bouton "Précédent" est cliqué
+    document.getElementById("prev-button").addEventListener("click", function() {
+            currentIndex = (currentIndex - 1 + responses.length) % responses.length; // Aller à l'indice précédent
+            updateModal(); // Mettre à jour le modal avec la nouvelle réponse
+    });
+
+
+
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche la soumission traditionnelle du formulaire
+
+        // Définition des données à envoyer
+        var data = {
+            "process": document.getElementById('moyenPaiement').value,
+            "amount": document.getElementById('montant').value,
+            "phoneNumber": document.getElementById('telephone').value, // Récupère la valeur du champ téléphone du formulaire
+            "canal": "mobile_app",
+            "country": "France",
+            "event": "purchase",
+            "browser": "Chrome Mobile",
+            "ip": "192.168.1.1",
+            "agregator": "Stripe"
+        };
+
+        // Envoi de la requête POST
+        fetch('http://192.168.1.23:8000/predict', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json', // Assurez-vous que le serveur accepte le JSON
+            },
+            body: JSON.stringify(data) // Convertit les données en chaîne JSON
+        })
+        .then(response => response.json()) // Convertit la réponse en JSON
+        .then(data => {
+            //console.log(getResponseMessage(data)); // Affiche la réponse dans la console du navigateur
+            // Envoyer une requête à l'API Rasa
+            message = getResponseMessage(data);
+            fetch('http://ai.zekin.me:5005/webhooks/rest/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Afficher la réponse dans le modal
+                responses = data.map(entry => entry.text); // Mettre à jour les réponses avec celles de l'API Rasa
+                currentIndex = 0; // Réinitialiser l'indice actuel
+                updateModal(); // Mettre à jour le modal avec la première réponse
+                $('#response-modal').modal('show'); // Afficher le modal
+            })
+            .catch(error => {
+                console.error('Erreur lors de la communication avec l\'API Rasa :', error);
+            });
+
+            
+            // Une fois la requête POST traitée avec succès, ouvrez le widget de chat Rasa
+            var widget = document.getElementById('rasa-chat-widget');
+            widget.style.display = 'block'; // Affiche le widget de chat Rasa
+            widget.scrollIntoView({ behavior: 'smooth' }); // Fait défiler la page jusqu'au widget de chat Rasa
+        })
+        .catch((error) => {
+            console.error('Error:', error); // Gère les erreurs éventuelles
+        });
+    });
+
+
+    function getResponseMessage(key) {
+    switch(key) {
+        case "INCORRECT_SETTINGS":
+            return "Je veux voter, mais je n'y arrive pas. Hors tout semble normal";
+        case "INSUFFICIENT_BALANCE":
+            return "Je veux voter, mais le prompt ne vient pas pour que je puisse confirmer le paiement";
+        case "SUCCESS":
+            return "J'ai pu voter, tout est ok";
+        case "TRANSACTION_CANCEL":
+            return "Je ne savais pas que le vote était payant";
+        case "WAITING_CUSTOMER_PAYMENT":
+            return "Je n'ai pas l'intention de voter";
+        default:
+            return "J'ai pu voter, tout est ok";
+    }
+}
+
+    
+  </script>
+
+
+
+
+
+<!--script>
+  document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Empêche la soumission traditionnelle du formulaire
+
+      // Définition des données à envoyer
+      var data = {
+          "process": "transaction",
+          "amount": 10,
+          "phoneNumber": document.getElementById('telephone').value, // Récupère la valeur du champ téléphone du formulaire
+          "canal": "mobile_app",
+          "country": "France",
+          "event": "purchase",
+          "browser": "Chrome Mobile",
+          "ip": "192.168.1.1",
+          "agregator": "Stripe"
+      };
+
+      // Envoi de la requête POST
+      fetch('http://192.168.1.23:8000/predict', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json', // Assurez-vous que le serveur accepte le JSON
+          },
+          body: JSON.stringify(data) // Convertit les données en chaîne JSON
+      })
+      .then(response => response.json()) // Convertit la réponse en JSON
+      .then(data => {
+          console.log(data); // Affiche la réponse dans la console du navigateur
+          
+         
+      })
+      .catch((error) => {
+          console.error('Error:', error); // Gère les erreurs éventuelles
+      });
+  });
+</script-->
+
+  
+
+    <!-- Bootstrap et jQuery JS (nécessaire pour les composants Bootstrap, par exemple les modaux, les tooltips) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="rasa-chat-widget" data-websocket-url="ws://ai.zekin.me:5005/socket.io/"></div>
     <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
-
-
-    
-  </body>
+</body>
 </html>
+

@@ -34,9 +34,7 @@ responses:
   - text: "Pour créer un compte sur Zekin, veuillez contacter le support technique par WhatsApp au +22952734444 pour une assistance. Nous aurons besoin de votre registre de commerce, votre numéro d'identification fiscale et une preuve de votre profession de promoteur culturel. Cela peut être votre carte professionnelle ou culturelle."
 
   utter_authorization_request:
-  - text: "Nous disposons des autorisations de l’Autorité de Régulation des Communications Electroniques et de la Poste (ARCEP) enregistré aux numéros : \n
-       No 0006-2021 DDSVA-2021-03-5WR89-IBG1A-80W8C délivré le 12/03/2021 faisant office de la déclaration de service interactifs ou non basé sur la voix ou le SMS ZEKIN ;\n
-       No 2021-084/ARCEP/PT/SE/DAF/DCT/DJPC/DAR/GU et No 2021-085/ARCEP/PT/SE/DAF/DCT/DJPC/DAR/GU portant attribution de ressource en numérotation à la société URBAN TECHNOLOGY"
+  - text: "Nous disposons des autorisations de l’Autorité de Régulation des Communications Electroniques et de la Poste (ARCEP) enregistré aux numéros : \nNo 0006-2021 DDSVA-2021-03-5WR89-IBG1A-80W8C délivré le 12/03/2021 faisant office de la déclaration de service interactifs ou non basé sur la voix ou le SMS ZEKIN ;\nNo 2021-084/ARCEP/PT/SE/DAF/DCT/DJPC/DAR/GU et No 2021-085/ARCEP/PT/SE/DAF/DCT/DJPC/DAR/GU portant attribution de ressource en numérotation à la société URBAN TECHNOLOGY"
   
   utter_account_confirmation_request:
   - text: "Si vous rencontrez des difficultés pour confirmer votre compte sur Zekin, veuillez vérifier votre boîte de réception ou vos spams. Si le lien de validation n'est pas reçu ou s'il est expiré, veuillez contacter le support technique par WhatsApp au +22952734444 pour obtenir de l'aide. Nous vous aiderons à valider votre compte."
@@ -51,10 +49,10 @@ responses:
   - text: "Pour enregistrer votre numéro de retrait sur Zekin, suivez les instructions fournies dans votre profil utilisateur ou contactez votre gestionnaire de compte pour obtenir plus d'assistance technique."
 
   utter_making_withdrawal_request:
-  - text: "Pour faire une demande de retrait sur Zekin, remplissez le formulaire de demande disponible dans votre compte et suivez les instructions, ou contactez votre gestionnaire de compte pour obtenir plus d'assistance technique."
+  - text: "Pour faire une demande de retrait sur Zekin, remplissez le formulaire de demande disponible dans votre compte dans la rubrique 'Paiement' et suivez les instructions.Cela ne nécessite aucun frais. C'est gratuit. Plusieurs moyens de retrait sont disponible : Mobile money, transfert bancaire, western union. Votre demande est traité au plus en 48h ouvrable. Contactez votre gestionnaire de compte pour obtenir plus d'assistance technique."
 
   utter_voting_difficulty_request:
-  - text: "Si vous rencontrez des difficultés à voter sur Zekin, veuillez vérifier votre connexion Internet, vous assurer que vous disposez d'un solde suffisant sur votre compte mobile ou carte bancaire, puis réessayer."
+  - text: "Si vous rencontrez des difficultés à voter sur Zekin, veuillez vérifier votre connexion Internet, vous assurer que vous disposez d'un solde suffisant sur votre compte mobile ou carte bancaire, puis réessayer en cliquant sur le lien de vote de votre nominé ou en écrivant par wgatsapp au +22990181817."
 
   utter_displaying_voting_form_request:
   - text: "Pour accéder au formulaire de vote sur Zekin, assurez-vous d'être connecté à Internet, puis cliquez sur le lien de vote de votre nominé. Si vous connaissez son mot clé, vous pouvez également voter pour lui en envoyant un message WhatsApp au numéro +22990181817. Notre système intelligent vous guidera. Vous pouvez également voter pour lui en accédant à la page de vote de l'événement ici : https://zekin.me/events."
@@ -63,13 +61,13 @@ responses:
   - text: "Pour vérifier le statut de vos votes sur Zekin, rendez-vous sur https://zekin.me/ et cliquez sur la rubrique 'Vérifier un vote'. Vous aurez besoin de renseigner le numéro de téléphone et l'ID de la transaction pour effectuer la vérification."
 
   utter_changing_standard_number_vote_request:
-  - text: "Pour changer le nombre de votes par défaut dans le formulaire de vote en ligne, cliquez simplement dans le champ, effacez le nombre par défaut et saisissez le nombre de votes souhaité."
+  - text: "Pour changer le nombre de votes par défaut dans le formulaire de vote en ligne, cliquez simplement dans le champ, effacez le nombre par défaut et saisissez le nombre de votes souhaité. Le minimum est bien évidement 1 vote et le maximum est ce que votre solde disponible vous permet d'accorder à votre nominé."
 
   utter_credit_card_issues_request:
-  - text: "Seules les cartes bancaires internationales telles que VISA et MASTERCARD sont acceptées. Toutefois, si vous utilisez l'une de ces cartes et que le problème persiste, il se peut que l'agrégateur de paiement rencontre des perturbations. Veuillez réessayer ultérieurement."
+  - text: "Seules les cartes bancaires internationales telles que VISA et MASTERCARD sont acceptées. Toutefois, si vous utilisez l'une de ces cartes et que le problème persiste, il se peut que l'agrégateur de paiement rencontre des perturbations ou qu'il y ait un flottement de la connexion internet. Veuillez vérifier votre connexion internet et réessayer s'il vous plaît."
 
   utter_verifying_number_votes_request:
-  - text: "Pour vérifier le nombre de votes des candidats sur Zekin, rendez-vous sur https://zekin.me/events, puis cliquez sur le nom de votre événement. Si le promoteur a rendu les résultats publics, vous verrez alors affiché le nombre de votes des candidats. Sinon, veuillez contacter le promoteur culturel."
+  - text: "Pour vérifier le nombre de votes des candidats sur Zekin, rendez-vous sur https://zekin.me/events, puis cliquez sur le nom de votre événement. Si le promoteur a rendu les résultats publics, vous verrez alors affiché le nombre de votes des candidats. Sinon, veuillez contacter le promoteur culturel. \n Si vous êtes un promoteur culturel, une fois connecté à votre espace sur Zekin, veuillez cliquer sur 'Vote en ligne', puis 'Résultats'. Vous aurez accès résultats de votes de tous les nominés."
 
   utter_incorrect_settings_request:
   - text: "Nous avons bien pris note de votre requête. Notre équipe de support technique est déjà à pied d'œuvre pour régler le problème. Nous vous contacterons dès que la situation sera réglée. Merci pour votre patience."
@@ -81,10 +79,10 @@ responses:
   - text: "Merci d'avoir soutenu votre artiste. Vous contribuez grandement à la promotion de la culture africaine à travers le monde."
 
   utter_transaction_cancel_request:
-  - text: "Les votes pour cet événement sont payants. Assurez-vous d'avoir suffisamment de solde pour accorder votre vote. Votre artiste compte sur vous pour se faire connaître dans le monde entier."
+  - text: "Les votes pour cet événement sont payants. Assurez-vous d'avoir suffisamment de solde pour accorder votre vote. Votre artiste compte sur vous pour se faire connaître dans le monde. Pour ce faire, vous pouvez commencer par exemple à lui accorder un minimum de vote."
 
   utter_waiting_customer_payment_request:
-  - text: "Notre culture mérite d'être promue à travers le monde. En soutenant nos artistes, vous participez activement à cette promotion. Nous comptons sur votre soutien continu pour cette noble cause."
+  - text: "Les votes sont payants. Car, notre culture mérite d'être promue à travers le monde. En soutenant nos artistes, vous participez activement à cette promotion. Nous comptons sur votre soutien continu pour cette noble cause."
 
   utter_ask_continue_issue:
   - text: "Rencontrez-vous d'autres problèmes ou avez-vous besoin de plus d'informations ?"

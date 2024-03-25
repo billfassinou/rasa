@@ -13,18 +13,8 @@ nlu:
     - coucou
     - Hello
     - Coucou Zekin
-    - Hi there
     - Hi Zekin
-    - Greetings
-    - Hi, how are you?
-    - Good morning
-    - Hi everyone
-    - Hi, nice to meet you
-    - Hi, can I ask something?
-    - Hey, what's up?
-    - Hi, is anyone there?
-    - Hola
-
+    
 - intent: general_information_request
   examples: |
     - Zekin, c'est quoi ?
@@ -137,7 +127,6 @@ nlu:
     - Je ne reçois pas le code de vérification lorsque j'essaie de me connecter à Zekin, que faire ?
     - Y a-t-il des problèmes de connexion connus avec Zekin en ce moment ?
     - Je suis sûr que mes identifiants sont corrects, mais je ne peux toujours pas me connecter, pourquoi ?
-    - Comment puis-je changer mon adresse e-mail de connexion sur Zekin ?
     - Je ne peux pas me connecter même après avoir changé mon mot de passe, que se passe-t-il ?
 
 
@@ -155,7 +144,6 @@ nlu:
     - Où puis-je trouver un résumé des résultats des votes sur Zekin ?
     - Je n'arrive pas à voir les résultats du vote, quel est le problème ?
     - Les résultats des votes ne s'affichent pas correctement sur Zekin, que faire ?
-    - Comment puis-je vérifier si mon vote a été pris en compte dans les résultats ?
     - Les résultats des votes sont-ils anonymes sur Zekin ?
     - Les résultats des votes sont-ils visibles pour tout le monde sur Zekin ?
     - Y a-t-il un délai pour afficher les résultats des votes sur Zekin ?
@@ -227,14 +215,9 @@ nlu:
     - Je ne comprends pas comment voter sur Zekin, pouvez-vous m'expliquer ?
     - Quels sont les problèmes courants lors du vote sur Zekin ?
     - Mon vote sur Zekin a été refusé, pourquoi ?
-    - Est-ce que je peux revoter si j'ai fait une erreur sur Zekin ?
-    - Comment puis-je signaler un problème avec le processus de vote sur Zekin ?
     - Est-ce que Zekin offre un support pour les problèmes de vote ?
-    - Y a-t-il un guide détaillé sur la manière de voter sur Zekin ?
     - Que faire si je suis incapable de terminer le processus de vote sur Zekin ?
     - Je ne trouve pas l'option de vote sur Zekin, que faire ?
-    - Est-ce que je peux voter anonymement sur Zekin ?
-    - Les votes sur Zekin sont-ils sécurisés ?
 
 - intent: displaying_voting_form_request
   examples: |
@@ -264,6 +247,7 @@ nlu:
   examples: |
     - Je ne comprends pas le statut de mes votes. Comment puis-je le vérifier?
     - Où puis-je vérifier le statut de mes votes sur Zekin ?
+    - Comment puis-je vérifier si mon vote a été pris en compte dans les résultats ?
     - Comment savoir si mes votes ont été enregistrés avec succès sur Zekin ?
     - Les votes que j'ai passés sur Zekin ont-ils été pris en compte ?
     - Est-ce que Zekin a enregistré mes votes ?
@@ -342,7 +326,6 @@ nlu:
     - Comment puis-je accéder aux résultats des votes pour un événement spécifique sur Zekin ?
     - Zekin fournit-il des rapports détaillés sur les résultats des votes ?
     - Où puis-je consulter les chiffres officiels des votes sur Zekin ?
-    - Comment savoir si les votes sur Zekin sont toujours en cours ?
     - Y a-t-il un moyen de suivre les votes en direct sur Zekin ?
     - Est-ce que Zekin actualise les résultats des votes en temps réel ?
     - Où puis-je trouver les résultats des votes après la fin de l'événement sur Zekin ?
