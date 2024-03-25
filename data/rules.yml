@@ -105,4 +105,3 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
-  - action: utter_gratitude
