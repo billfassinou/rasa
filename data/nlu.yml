@@ -109,25 +109,22 @@ nlu:
 
 - intent: login_issue_request
   examples: |
-    - Je ne peux pas me connecter à mon compte. Comment puis-je résoudre ce problème?
-    - Je ne peux pas me connecter à mon espace nominé. Que dois-je vérifier?
+    - Je ne peux pas me connecter à mon compte. 
+    - Je ne peux pas me connecter à mon espace nominé.
     - Comment puis-je récupérer mon mot de passe pour me connecter à Zekin ?
-    - Mon identifiant Zekin ne fonctionne pas, que faire ?
+    - Mon identifiant Zekin ne fonctionne pas.
     - Comment réinitialiser mon mot de passe sur Zekin ?
-    - Je ne parviens pas à me connecter à Zekin, que puis-je faire ?
-    - J'ai oublié mon mot de passe Zekin, comment le récupérer ?
-    - Mon compte Zekin est bloqué, comment le débloquer ?
-    - Je rencontre des problèmes de connexion à Zekin, que faire ?
+    - Je ne parviens pas à me connecter à Zekin.
+    - J'ai oublié mon mot de passe Zekin.
+    - Mon compte Zekin est bloqué.
+    - Je rencontre des problèmes de connexion à Zekin.
     - Comment puis-je accéder à mon compte Zekin si j'ai perdu mon mot de passe ?
-    - Je ne peux pas me connecter à mon compte Zekin, que se passe-t-il ?
+    - Je ne peux pas me connecter à mon compte Zekin.
     - J'ai saisi le bon identifiant et mot de passe mais je ne peux pas me connecter, que faire ?
-    - Je reçois un message d'erreur lorsque j'essaie de me connecter à Zekin, que signifie-t-il ?
-    - Est-ce que Zekin est en panne ? Je ne peux pas accéder à mon compte.
-    - Mon compte Zekin a été piraté, que dois-je faire ?
-    - Je ne reçois pas le code de vérification lorsque j'essaie de me connecter à Zekin, que faire ?
-    - Y a-t-il des problèmes de connexion connus avec Zekin en ce moment ?
-    - Je suis sûr que mes identifiants sont corrects, mais je ne peux toujours pas me connecter, pourquoi ?
-    - Je ne peux pas me connecter même après avoir changé mon mot de passe, que se passe-t-il ?
+    - Je reçois un message d'erreur lorsque j'essaie de me connecter à Zekin.
+    - Je ne peux pas accéder à mon compte.
+    - Je suis sûr que mes identifiants sont corrects, mais je ne peux toujours pas me connecter.
+    - Je ne peux pas me connecter même après avoir changé mon mot de passe.
 
 
 - intent: view_results_issue_request
@@ -458,13 +455,144 @@ nlu:
     - Je ne suis pas enclin à voter pour le moment.
     - Le vote ne retient pas mon attention actuellement.
 
+
+- intent: waiting_payment_request
+  examples: |
+    - J'ai voté, les sous ont été retirés mais la transaction est restée en attente.
+    - La transaction est en attente après avoir voté.
+    - Les fonds ont été déduits mais la transaction est toujours en attente.
+    - Après avoir voté, la transaction est bloquée en attente.
+    - La transaction est toujours en attente malgré le débit des fonds.
+    - Après avoir voté, la transaction est toujours en attente de confirmation.
+    - J'ai voté, mais la transaction reste en attente.
+    - Malgré le paiement, la transaction est toujours en attente.
+    - La transaction est bloquée en attente après le paiement.
+    - Après avoir voté, la transaction est en attente de traitement.
+
+
+- intent: how_to_vote_request
+  examples: |
+    - Comment voter pour mon candidat ?
+    - Je ne sais pas comment voter pour mon candidat.
+    - Quelle est la procédure de vote pour soutenir mon candidat ?
+    - Pouvez-vous m'expliquer comment voter pour mon candidat ?
+    - Je voudrais savoir comment exprimer mon vote en faveur de mon candidat.
+    - Pourriez-vous me guider sur la façon de voter pour mon candidat ?
+    - J'ai besoin d'aide pour comprendre comment voter pour mon candidat.
+    - Comment puis-je participer au vote pour mon candidat ?
+    - Pouvez-vous me donner des instructions sur le processus de vote pour mon candidat ?
+    - Je cherche des informations sur la manière de voter pour mon candidat.
+
+- intent: how_to_check_result_request
+  examples: |
+    - Comment vérifier les votes obtenus par candidat ?
+    - Quelle est la méthode pour vérifier les résultats des candidats ?
+    - Comment puis-je consulter les votes obtenus par chaque candidat ?
+    - Pouvez-vous m'expliquer comment je peux vérifier les votes pour chaque candidat ?
+    - Je souhaite savoir comment accéder aux résultats des candidats.
+    - Quel est le processus pour vérifier les votes attribués à chaque candidat ?
+    - Comment est-ce que je peux voir les résultats des votes pour chaque candidat ?
+    - Y a-t-il une façon spécifique de consulter les votes des candidats ?
+    - Je voudrais savoir comment je peux consulter les résultats des candidats après le vote.
+    - Pourriez-vous m'indiquer comment je peux vérifier les votes reçus par les candidats ?
+
+
+- intent: grateful
+  examples: |
+    - Merci
+    - Merci grave
+    - T'es au top
+    - Tu déchires
+    - Merci mille fois
+    - Trop cool de ta part
+    - Ça fait plaisir
+    - Tu assures grave
+    - Franchement, t'es génial(e)
+    - Tu gères trop
+    - Ça fait du bien
+    - Super sympa de ta part
+    - Merci infiniment
+    - Tu assures un max
+    - Vraiment sympa de ta part
+    - Tu es fantastique
+    - Ça me touche énormément
+    - Tu assures grave, merci !
+    - Vraiment, tu es formidable !
+
+- intent: okay
+  examples: |
+    - ok
+    - d'accord
+    - parfait
+    - entendu
+    - ça marche
+    - bien sûr
+    - je comprends
+    - tout à fait
+    - ça va
+    - c'est bon
+    - super
+    - nickel
+    - impec
+    - cool
+    - ça roule
+    - pas de souci
+    - aucun problème
+    - OK pour moi
+    - pas de problème
+    - tout est bon
+
+- intent: okayno
+  examples: |
+    - Non
+    - Pas du tout
+    - Pas vraiment
+    - Absolument pas
+    - Négatif
+    - Jamais
+    - Pas envisageable
+    - Sans façon
+    - Hors de question
+    - Pas question
+    - Sûrement pas
+    - Certainement pas
+    - Plutôt non
+    - Loin de là
+    - Peut-être une autre fois
+    - Pas pour moi
+    - Pas mon truc
+    - Pas intéressé(e)
+    - Non merci
+
+- intent: okayes
+  examples: |
+    - Oui
+    - Bien sûr
+    - Absolument
+    - Tout à fait
+    - D'accord
+    - Volontiers
+    - OK
+    - Sans problème
+    - Ça marche
+    - Parfait
+    - Oui, bien sûr
+    - Oui, volontiers
+    - Certainement
+    - Bien entendu
+    - Tout à fait d'accord
+    - Oui, ça me va
+    - D'accord, super
+    - Oui, parfaitement
+    - OK, c'est noté
+    - Oui, je suis d'accord
+
+
 - intent: goodbye
   examples: |
     - Au revoir
     - À bientôt
     - Bye
-    - Merci
-    - OK
     - Bonne journée
     - À plus tard
     - Ciao

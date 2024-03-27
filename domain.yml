@@ -21,6 +21,13 @@ intents:
   - success_request
   - transaction_cancel_request
   - waiting_customer_payment_request
+  - waiting_payment_request
+  - how_to_vote_request
+  - how_to_check_result_request
+  - grateful
+  - okay
+  - okayes
+  - okayno
   - goodbye
 
 responses:
@@ -40,7 +47,7 @@ responses:
   - text: "Si vous rencontrez des difficultés pour confirmer votre compte sur Zekin, veuillez vérifier votre boîte de réception ou vos spams. Si le lien de validation n'est pas reçu ou s'il est expiré, veuillez contacter le support technique par WhatsApp au +22952734444 pour obtenir de l'aide. Nous vous aiderons à valider votre compte."
 
   utter_login_issue_request:
-  - text: "Si vous rencontrez des difficultés à vous connecter, assurez-vous d'avoir bien saisi votre mot de passe et votre adresse e-mail correctement et que votre connexion Internet fonctionne. Si vous avez oublié le mot de passe, vous pouvez le réinitialiser en cliquant sur https://zekin.me/fr/reset-password. Si cela ne résout pas votre problème, veuillez contacter notre support technique par WhatsApp au +22952734444."
+  - text: "Si vous rencontrez des difficultés à vous connecter, assurez-vous d'avoir bien saisi votre mot de passe et votre adresse e-mail correctement et que votre connexion Internet fonctionne. Si vous n'arrivez toujours pas à vous connectez ou que vous avez oublié le mot de passe, vous pouvez le réinitialiser en cliquant sur https://zekin.me/fr/reset-password. Si cela ne résout pas votre problème, veuillez contacter notre support technique par WhatsApp au +22952734444."
 
   utter_view_results_issue_request:
   - text: "Si vous êtes un nominé, pour consulter les résultats des votes sur Zekin, deux possibilités s'offrent à vous. Si les résultats de vote sont publics pour l'événement, vous pouvez voir votre résultat de vote en allant sur la page de vote de l'événement (https://zekin.me/events). Vous pouvez aussi consulter votre historique de vote en vous connectant à la page nominée avec votre code secret. En cas de besoin, n'hésitez pas à nous contacter par WhatsApp au +22952734444."
@@ -90,8 +97,26 @@ responses:
   utter_acknowledge_issue:
   - text: "Je prends note de votre problème. Je vais essayer de vous aider à le résoudre."
 
-  utter_gratitude:
-  - text: "N'hésitez pas à me contacter si vous avez d'autres questions."
+  utter_waiting_payment_request:
+  - text: "Veuillez nous transmettre l'id de transaction de l'opérateur et votre numéro de téléphone pour vérification."
+
+  utter_how_to_vote_request:
+  - text: "Cliquez sur le lien de vote de votre cnandidat. Une fois sur le formulaire de vote, mettez votre numéro de téléphone en prenant soin de bien choisir l'indicatif de votre pays. Ensuite vous renseignez le nombre de votes et vous appuyez sur paiement, selon votre pays vous recevrez soit un prompt de paiement directement sur votre téléphone ou vous suivrez des instructions pour effectuer le paiement à la fin."
+
+  utter_how_to_check_result_request:
+  - text: "Si vous êtes un promoteur culturel, Connectez-vous à votre compte sur Zekin, allez au niveau de l'onglet 'Vote en ligne' situé dans la barre de menu à gauche, cliquez sur Résultats en dessous. Une fois sur la page, choisissez le nom de l'évènement et les votes obtenus par chaque candidats s'afficheront. Vous pourrez également sélectionner chaque catégories pour vérifier les votes des candidats par catégories.\n Par contre, si vous n'êtes pas promoteur culturel, allez sur la page de vote de l'événement. Vous y trouverez le nombre de vote obtenu par candidat."
+
+  utter_okay:
+  - text: "En quoi puis-je vous être utile ?"
+
+  utter_okayno:
+  - text: "D'accord, ce fut un plaisir. N'hésitez pas à me contacter si vous avez d'autres préocupations."
+
+  utter_okayes:
+  - text: "Laquelle s'il vous plaît ?"
+
+  utter_grateful:
+  - text: "Tout le plaisir est pour moi ! N'hésitez pas à me contacter si vous avez d'autres questions."
 
   utter_goodbye:
   - text: "Au revoir ! Passez une bonne journée !"

@@ -107,16 +107,16 @@
             "process": document.getElementById('moyenPaiement').value,
             "amount": document.getElementById('montant').value,
             "phoneNumber": document.getElementById('telephone').value, // Récupère la valeur du champ téléphone du formulaire
-            "canal": "mobile_app",
-            "country": "France",
+            "canal": "Website",
+            "country": "BJ",
             "event": "purchase",
             "browser": "Chrome Mobile",
             "ip": "192.168.1.1",
-            "agregator": "Stripe"
+            "agregator": "FPZ"
         };
 
         // Envoi de la requête POST
-        fetch('http://192.168.1.23:8000/predict', {
+        fetch('http://51.38.34.139:8000/predict', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', // Assurez-vous que le serveur accepte le JSON
